@@ -14,16 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     Todo.init({
-        username: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            trim: true
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            trim: true
-        },
         description: {
             type: DataTypes.STRING,
             allowNull: false,

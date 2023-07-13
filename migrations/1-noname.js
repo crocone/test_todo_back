@@ -13,7 +13,7 @@ var Sequelize = require('sequelize');
 var info = {
     "revision": 1,
     "name": "noname",
-    "created": "2023-07-12T11:55:10.847Z",
+    "created": "2023-07-13T05:17:45.508Z",
     "comment": ""
 };
 
@@ -35,6 +35,12 @@ var migrationCommands = function(transaction) {
                         "field": "username",
                         "trim": true,
                         "unique": true,
+                        "allowNull": false
+                    },
+                    "email": {
+                        "type": Sequelize.STRING,
+                        "field": "email",
+                        "trim": true,
                         "allowNull": false
                     },
                     "password_hash": {
@@ -76,18 +82,6 @@ var migrationCommands = function(transaction) {
                         "field": "id",
                         "autoIncrement": true,
                         "primaryKey": true,
-                        "allowNull": false
-                    },
-                    "username": {
-                        "type": Sequelize.STRING,
-                        "field": "username",
-                        "trim": true,
-                        "allowNull": false
-                    },
-                    "email": {
-                        "type": Sequelize.STRING,
-                        "field": "email",
-                        "trim": true,
                         "allowNull": false
                     },
                     "description": {

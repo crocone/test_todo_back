@@ -10,18 +10,6 @@
                     "field": "id",
                     "seqType": "Sequelize.INTEGER"
                 },
-                "username": {
-                    "allowNull": false,
-                    "trim": true,
-                    "field": "username",
-                    "seqType": "Sequelize.STRING"
-                },
-                "email": {
-                    "allowNull": false,
-                    "trim": true,
-                    "field": "email",
-                    "seqType": "Sequelize.STRING"
-                },
                 "description": {
                     "allowNull": false,
                     "field": "description",
@@ -75,6 +63,12 @@
                     "unique": true,
                     "trim": true,
                     "field": "username",
+                    "seqType": "Sequelize.STRING"
+                },
+                "email": {
+                    "allowNull": false,
+                    "trim": true,
+                    "field": "email",
                     "seqType": "Sequelize.STRING"
                 },
                 "password_hash": {
