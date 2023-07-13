@@ -47,7 +47,7 @@ exports.delete = (request) => {
             return
         }
         db.Todo.destroy({where: {id: todoIdForDelete}}).then(() => {
-            resolve('Задача удалена')
+            resolve(success('Задача удалена'))
         }).catch((err) => {
             reject(error(err.message))
         })
@@ -64,7 +64,7 @@ exports.update = (request) => {
         }
 
         db.Todo.update(request.body, {where: {id: todoIdForUpdate}}).then(() => {
-            resolve('Задача успешно обновлена')
+            resolve(success('Задача успешно обновлена'))
         }).catch((err) => {
             reject(error(err.message))
         })
